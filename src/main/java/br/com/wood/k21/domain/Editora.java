@@ -11,6 +11,7 @@ public class Editora {
 	@GeneratedValue
 	private Long id;
 	private String nome;
+	private String email;
 
 	public Long getId() {
 		return id;
@@ -26,6 +27,20 @@ public class Editora {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "Editora [id=" + id + ", nome=" + nome + ", email=" + email
+				+ "]";
 	}
 
 }

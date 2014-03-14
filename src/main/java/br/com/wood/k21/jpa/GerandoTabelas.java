@@ -9,16 +9,26 @@ import br.com.wood.k21.domain.Editora;
 public class GerandoTabelas {
 	public static void main(String[] args) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("dbk21");
-		Editora e = new Editora();
-		e.setNome("FTD");
+		EntityManager manager = factory.createEntityManager();
 		
-		EntityManager em = factory.createEntityManager();
-		em.getTransaction().begin();;
-		em.persist(e);
+		manager.getTransaction().begin();
 		
-		em.getTransaction().commit();
-		em.close();
+		Editora e1 = new Editora();
+		e1.setNome("Editora FTD");
+		e1.setEmail("ftd@ftd.com.br");
+		
+		Editora e2 = new Editora();
+		e2.setNome("Editora Abril");
+		e2.setEmail("abril@abril.com.br");
+		
+		manager.persist(e1);
+		manager.persist(e2);
+		
+		manager.getTransaction().commit();
+		manager.close();
 		factory.close();
+		
+		
 		
 		
 	}
