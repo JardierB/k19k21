@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(schema = "domain", name = "pessoas")
@@ -19,6 +20,9 @@ public class Pessoa {
 	private Long id;
 	private String nome;
 	private BigDecimal altura;
+	
+	@Transient
+	private int idade;
 
 	public Long getId() {
 		return id;

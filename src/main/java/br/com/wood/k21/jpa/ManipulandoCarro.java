@@ -14,8 +14,8 @@ public class ManipulandoCarro {
 		manager.getTransaction().begin();
 
 		Carro c = new Carro();
-		c.setMarca("Volks");
-		c.setModelo("Fusca");
+		c.setMarca("GM");
+		c.setModelo("Astra Sedan");
 
 		manager.persist(c);
 		manager.getTransaction().commit();
