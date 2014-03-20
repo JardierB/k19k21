@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.wood.k21.domain.Pessoa;
+import br.com.wood.k21.persistencia.entity.Pessoa;
 
 public class ManipulandoPessoas {
 

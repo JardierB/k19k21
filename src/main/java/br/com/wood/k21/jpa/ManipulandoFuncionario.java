@@ -2,7 +2,7 @@ package br.com.wood.k21.jpa;
 
 import java.util.ArrayList;
 
-import br.com.wood.k21.domain.Funcionario;
+import br.com.wood.k21.persistencia.entity.Funcionario;
 
 public class ManipulandoFuncionario {
 	public static void main(String[] args) {

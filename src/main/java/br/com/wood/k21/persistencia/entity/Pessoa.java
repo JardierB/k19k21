@@ -1,4 +1,4 @@
-package br.com.wood.k21.domain;
+package br.com.wood.k21.persistencia.entity;
 
 import java.math.BigDecimal;
 

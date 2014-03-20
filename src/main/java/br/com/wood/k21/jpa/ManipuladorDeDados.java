@@ -21,6 +21,9 @@ public class ManipuladorDeDados {
 
 	public void persistir(Object clazz) {
 		manager.persist(clazz);
+	}
+
+	public void close() {
 		manager.getTransaction().commit();
 		manager.close();
 		factory.close();

@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.wood.k21.domain.Usuario;
+import br.com.wood.k21.persistencia.entity.Usuario;
 
 public class AdcionandoUsuario {
 	public static void main(String[] args) {

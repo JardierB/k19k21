@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.wood.k21.domain.Editora;
+import br.com.wood.k21.persistencia.entity.Editora;
 
 public class GerandoTabelas {
 	public static void main(String[] args) {

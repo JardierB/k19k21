@@ -1,7 +1,7 @@
 package br.com.wood.k21.jpa;
 
-import br.com.wood.k21.domain.Periodo;
-import br.com.wood.k21.domain.Turma;
+import br.com.wood.k21.persistencia.entity.Periodo;
+import br.com.wood.k21.persistencia.entity.Turma;
 
 public class ManipulandoTurma {
 	public static void main(String[] args) {
