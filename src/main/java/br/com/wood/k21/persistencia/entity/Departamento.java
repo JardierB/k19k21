@@ -1,10 +1,12 @@
 package br.com.wood.k21.persistencia.entity;
 
-import java.util.List;
+import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -17,13 +19,20 @@ public class Departamento {
 	
 	private String nome;
 	
-	/*@OneToMany
-	@JoinTable(name="domain.dep_func",
+	@OneToMany
+	@JoinTable(name="domain.departamento_funcionario",
 			joinColumns=@JoinColumn(name="dep_id"),
 			inverseJoinColumns=@JoinColumn(name="func_id"))
-	private Collection<Funcionario> funcionarios;*/
-	@OneToMany
-	private List<Funcionario> funcionarios;
+	private Collection<Funcionario> funcionarios;
+	
+	/**
+	 * Usando uma lista conforme abaixo, o JPA ira criar:
+	 * Uma tabela com o nome da entidade_associaação(departamento_funcionario,
+	 * e os ids: departamento_id e funcionario_id
+	 * @return
+	 */
+//	@OneToMany
+//	private List<Funcionario> funcionarios;
 
 	public Long getId() {
 		return id;
@@ -41,11 +50,11 @@ public class Departamento {
 		this.nome = nome;
 	}
 
-	public List<Funcionario> getFuncionarios() {
+	public Collection<Funcionario> getFuncionarios() {
 		return funcionarios;
 	}
 	
-	public void setFuncionarios(List<Funcionario> funcionarios) {
+	public void setFuncionarios(Collection<Funcionario> funcionarios) {
 		this.funcionarios = funcionarios;
 	}
 	

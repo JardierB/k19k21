@@ -17,6 +17,7 @@ public class CategoriaProduto {
 		Categoria categoria = new Categoria();
 		categoria.setNome("Livros de Informática");
 		categoria.setDescricao("Livros de desenvolvimento, bando de dados...");
+		categoria.setAtivo(Boolean.TRUE);
 		
 		categoria = categoriaDAO.save(categoria);
 		
@@ -28,6 +29,7 @@ public class CategoriaProduto {
 		
 		Produto p2 =  new Produto();
 		p2.setNome("Persistência com JPA e Hibernate");
+		p2.setQuantidade(30);
 		p2.setValor(new BigDecimal(150.50));
 		p2.setCategoria(categoria);
 		
